@@ -1,16 +1,18 @@
-"use strict";
+"use strict"
+
+import {apikey} from "./apikey.js";
 
 // Hämta väderprognos
 async function getForecast(lat, long) {
     try {
-        let response = await fetch(`https://api.tomorrow.io/v4/weather/forecast?location=${lat},${long}&apikey=4dDidBpHXa3Uo0gU74fDA6LULAqfsTc6`);
+        let response = await fetch(`https://api.tomorrow.io/v4/weather/forecast?location=${lat},${long}&apikey=${apikey}`);
         return await response.json();
     } catch (error) {
         console.log("Något gick fel: " + error);
     }
-}
+}                                                               
 
-// Skriv ut väderprognos
+// Skriv ut väderprognos med koordinater från sökrutan
 async function writeForecast(lat, long) {
     try {
         let data = await getForecast(lat, long);
@@ -39,7 +41,7 @@ async function writeForecast(lat, long) {
     }
 }
 
-// Formatera datum i formatet "veckodag dd/mm"
+// Formatera datum 
 function formatDate(dateString) {
     let date = new Date(dateString);
     let day = date.getDay();
@@ -81,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     marker = L.marker(coordinates).addTo(map);
                 }
 
-                // Skriv ut väderprognos med sök-koordinater
+                // Kalla på funktionen väderprognos med koordinater från sökrutan
                 writeForecast(lat, lon);
 
             } else {
