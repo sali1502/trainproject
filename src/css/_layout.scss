@@ -1,0 +1,71 @@
+@use 'base';
+@use 'keyframes';
+
+* {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-gap: 0px;
+  padding: 0px;
+  background-color: white;
+  padding: 0px;
+  width: 100%;
+  max-width: 1620px;
+  margin: auto;
+}
+
+/* Design av header */
+header {
+  height: 80px;
+  background-color: rgb(146, 211, 167);
+  text-align: center;
+  padding-top: 4vh;
+  max-width: 1620px;
+  margin: 0 auto 0 auto;
+}
+
+  body {
+    margin: 0 auto 0 auto;
+}
+
+h1 {
+  margin: 0 auto 0 auto;
+}
+
+p {
+    margin: 0 auto 0 auto;
+}
+
+footer {
+  height: 80px;
+  background-color: rgb(146, 211, 167);
+  text-align: center;
+  padding-top: 4vh;
+  max-width: 1620px;
+  margin: 0 auto 0 auto;
+}
+
+footer p {
+  margin: 0 auto 0 auto;
+}
+
+#map {
+    height: 400px;
+}
+
+/* Media querys */
+
+/* Visar en kolumn för litet läge, mobiltelefon */
+@media only screen and (max-width: 800px) {
+
+    #map {
+        height: 180px;
+    }
+}
