@@ -33,7 +33,6 @@ async function writeForecast(lat, long) {
             <p>Högst: ${day.values.temperatureMax}&#8451
             <br>Lägst: ${day.values.temperatureMin}&#8451
             </p>
-            <img src="../images/${day.values.weatherCodeMax}.png">
             </article>
             `;
         });
