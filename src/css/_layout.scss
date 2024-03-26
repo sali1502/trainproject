@@ -1,29 +1,9 @@
 @use 'base';
 @use 'keyframes';
 
-* {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 2fr;
-  grid-gap: 0px;
-  padding: 0px;
-  background-color: white;
-  padding: 0px;
-  width: 100%;
-  max-width: 1620px;
-  margin: auto;
-}
-
 /* Design av header */
 header {
-  height: 80px;
+  height: 50px;
   background-color: rgb(146, 211, 167);
   text-align: center;
   padding-top: 4vh;
@@ -31,20 +11,51 @@ header {
   margin: 0 auto 0 auto;
 }
 
-  body {
-    margin: 0 auto 0 auto;
+body {
+  background-color: rgb(146, 211, 167);
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 1620px;
+  margin: 0 auto 0 auto;
 }
 
 h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 42px;
+  font-style: normal;
+  margin: 0 auto 0 auto;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 2em;
   margin: 0 auto 0 auto;
 }
 
 p {
-    margin: 0 auto 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4em;
+  margin: 0 auto 0 auto;
+}
+
+article p {
+  padding-bottom: 2vh;
 }
 
 footer {
-  height: 80px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6em;
+  height: 100px;
   background-color: rgb(146, 211, 167);
   text-align: center;
   padding-top: 4vh;
@@ -54,10 +65,33 @@ footer {
 
 footer p {
   margin: 0 auto 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9em;
+  line-height: 1.6em;
+
+}
+
+#searchInput {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+#searchBtn {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+#weather {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  text-align: center;
 }
 
 #map {
-    height: 400px;
+  height: 400px;
 }
 
 /* Media querys */
@@ -65,7 +99,54 @@ footer p {
 /* Visar en kolumn för litet läge, mobiltelefon */
 @media only screen and (max-width: 800px) {
 
-    #map {
-        height: 180px;
-    }
+  #map {
+    height: 180px;
+    margin: 0 auto 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin: 0 auto 0 auto;
+  }
+
+  h2 {
+    padding-right: 2vw;
+    padding-left: 2vw;
+    padding-top: 1vh;
+    margin: 0 auto 0 auto;
+  }
+
+  p {
+    padding-right: 2vw;
+    padding-left: 2vw;
+    margin: 0 auto 0 auto;
+  }
+
+  #searchInput {
+    padding-right: 2vw;
+    padding-left: 2vw;
+    margin: 0 auto 0 auto;
+  }
+
+  #searchBtn {
+    padding-right: 2vw;
+    padding-left: 2vw;
+    margin: 0 auto 0 auto;
+  }
+
+  #weather {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+  }
+
+  article p {
+    padding-bottom: 2vh;
+  }
+
 }

@@ -1,6 +1,6 @@
 "use strict"
 
-import {apikey} from "./apikey.js";
+import { apikey } from "./apikey.js";
 
 // Hämta väderprognos
 async function getForecast(lat, long) {
@@ -10,9 +10,9 @@ async function getForecast(lat, long) {
     } catch (error) {
         console.log("Något gick fel: " + error);
     }
-}                                                               
+}
 
-// Skriv ut väderprognos med koordinater från sökrutan
+// Skriv ut väderprognos med koordinater från sök
 async function writeForecast(lat, long) {
     try {
         let data = await getForecast(lat, long);
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     marker = L.marker(coordinates).addTo(map);
                 }
 
-                // Kalla på funktionen väderprognos med koordinater från sökrutan
+                // Kalla på funktionen skriv ut väderprognos
                 writeForecast(lat, lon);
 
             } else {
