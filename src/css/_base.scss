@@ -1,1 +1,53 @@
 @use "sass:math";
+
+// Variabel font
+$font-stack: 'Roboto', sans-serif;
+
+// Variabler "color functions"
+$primary-green: #5F8575;
+$dark-green: darken($primary-green, 20%);
+$light-green: lighten($primary-green, 20%);
+
+// Variabler färger
+$black: #000;
+$white: #fff;
+$grey: #1a1a1a;
+
+// Variabler ljust tema
+$primary-text: $black;
+$primary-bg: $white;
+$primary-heading: $dark-green;
+$primary-header-footer: $light-green;
+
+// Variabler mörkt tema
+$primary-text-darkm: $white;
+$primary-bg-darkm: $grey;
+$primary-heading-darkm: $white;
+$primary-header-footer-darkm: $light-green;
+
+// Mixin
+@mixin circle ($width, $height, $color) {
+    width: $width;
+    height: $height;
+    background: $color;
+    border-radius: 50%;
+}
+
+// If-else sats
+@mixin triangle($size, $color, $direction) {
+
+    height: 0px;
+    width: 0px;
+
+    border-color: transparent;
+    border-style: solid;
+    border-width: math.div($size, 2);
+
+    @if $direction ==up {
+        border-bottom-color: $color;
+    }
+
+    @else if $direction ==down {
+        border-top-color: $color;
+    }
+}

@@ -2,11 +2,292 @@
 @use 'keyframes';
 
 
+
+/* body {
+    background-color: base.$primary-bg;
+    font: 100% base.$font-stack;
+    font-weight: 400;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    max-width: 1512px;
+    margin: 0 auto 0 auto;
+}
+
+h1 {
+    font: 100% base.$font-stack;
+    margin: 0 auto 0 auto;
+    font-size: 2.5em;
+    line-height: 1.4em;
+    text-align: center;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+    color: base.$primary-text;
+    max-width: 550px;
+    color: base.$dark-green;
+}
+
+p {
+    margin: 0 auto 0 auto;
+    font-size: 1em;
+    line-height: 1.8em;
+    text-align: left;
+    color: base.$primary-text;
+    max-width: 550px;
+}
+
+ul {
+    margin: 0 auto 0 auto;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: base.$primary-text;
+    max-width: 550px;
+}
+
+.space1 {
+    height: 4vh;
+}
+
+.space2 {
+    height: 2vh;
+}
+
+.text-container {
+    margin: 0 auto 0 auto;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: base.$primary-text;
+    padding-bottom: 2vh;
+    max-width: 800px;
+    width: 100%;
+}
+
+footer {
+    font-size: 0.9em;
+    line-height: 2em;
+    height: auto;
+    background-color: base.$light-green;
+    margin-top: 4vh;
+    position: relative;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    max-width: 1512px;
+}
+
+footer p {
+    color: base.$primary-text;
+    text-align: center;
+}
+*/
+
+.image-container {
+    display: block;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    max-width: 900px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+/*
+.text {
+    color: base.$primary-text;
+}
+*/
+// Mixins
+.onedot {
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    @include base.circle (10px, 10px, base.$light-green);
+}
+
+.twodot {
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    @include base.circle (10px, 10px, base.$primary-green);
+}
+
+.threedot {
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    @include base.circle (10px, 10px, base.$dark-green);
+}
+
+.arrow {
+    margin: 0 auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    @include base.triangle (16px, base.$dark-green, down);
+}
+
+// Selector inheritance
+.dotone {
+    @extend .onedot;
+}
+
+.dottwo {
+    @extend .twodot;
+}
+
+.container-dot-header {
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+    max-width: 550px;
+    width: 100%;
+}
+
+.dot-header {
+    display: inline-block;
+}
+
+// Nästlad lista
+div {
+
+    margin: 0 auto;
+
+    ul {
+        padding: 0;
+        color: aqua;
+        padding-left: 4vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    li {
+        color: base.$primary-green;
+        padding-left: 6px;
+    }
+
+    a {
+        color: base.$black;
+        padding-left: 6px;
+        padding-top: 6px;
+        text-decoration: none;
+    }
+}
+
+// Animering - element som ändrar färg
+.backgroundTransition {
+    width: 150px;
+    height: 50px;
+    background-color: base.$light-green;
+    border-radius: 50;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding-top: 2vh;
+    animation: colorChangeStill 6s 2s infinite alternate both ease-out;
+}
+
+
+// Animering - element som ändrar färg och rör sig vid hoover
+.backgroundTransitionHover {
+    width: 150px;
+    height: 50px;
+    background-color: base.$light-green;
+    border-radius: 50;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.backgroundTransitionHover:hover {
+    animation: colorChangeHover 2s 0s infinite both ease-out;
+}
+
+// Animering - studsande prick
+#jumpingDot {
+    margin-top: 25vh;
+    @extend .threedot;
+    animation: jumpingDot 6s 2s infinite alternate both linear;
+}
+
+.chartFlex {
+    display: flex;
+    max-width: 1512px;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+}
+
+.chartContainer1 {
+    max-width: 800px;
+    margin: 0 auto 0 auto;
+    width: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.chartContainer2 {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+
+h2 {
+    font: 100% base.$font-stack;
+    text-align: center;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    margin: 0 auto, 0 auto;
+}
+
+#map {
+    height: 400px;
+}
+
+/* Media querys */
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+
+    .grid-container {
+        background-color: base.$primary-bg-darkm !important;
+    }
+
+    body {
+        background-color: base.$primary-bg-darkm !important;
+    }
+
+    h1 {
+        color: base.$primary-heading-darkm !important;
+    }
+
+    .text {
+        color: base.$primary-text-darkm !important;
+    }
+}
+
+
+/* Visar en kolumn för litet läge, mobiltelefon */
+
+@media only screen and (max-width: 800px) {
+
+    // Animering - studsande prick liten skärm
+    #jumpingDot {
+        margin-top: 40vh;
+        @extend .threedot;
+        animation: jumpingDot_mobile 6s 2s infinite alternate both linear;
+    }
+}
+
+
 header {
-  height: 5vh;
-  background-color: rgb(146, 211, 167);
-  text-align: center;
-  padding-top: 3vh;
   max-width: 1620px;
   margin: 0 auto 0 auto;
 }
@@ -23,7 +304,7 @@ body {
 
 h1 {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 2.4em;
   font-style: normal;
   padding-bottom: 2vh;
