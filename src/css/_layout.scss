@@ -2,109 +2,6 @@
 @use 'keyframes';
 
 
-
-/* body {
-    background-color: base.$primary-bg;
-    font: 100% base.$font-stack;
-    font-weight: 400;
-    font-size: 0.9em;
-    line-height: 1.8em;
-    max-width: 1512px;
-    margin: 0 auto 0 auto;
-}
-
-h1 {
-    font: 100% base.$font-stack;
-    margin: 0 auto 0 auto;
-    font-size: 2.5em;
-    line-height: 1.4em;
-    text-align: center;
-    padding-top: 4vh;
-    padding-bottom: 2vh;
-    color: base.$primary-text;
-    max-width: 550px;
-    color: base.$dark-green;
-}
-
-p {
-    margin: 0 auto 0 auto;
-    font-size: 1em;
-    line-height: 1.8em;
-    text-align: left;
-    color: base.$primary-text;
-    max-width: 550px;
-}
-
-ul {
-    margin: 0 auto 0 auto;
-    text-align: left;
-    font-size: 1em;
-    line-height: 1.8em;
-    color: base.$primary-text;
-    max-width: 550px;
-}
-
-.space1 {
-    height: 4vh;
-}
-
-.space2 {
-    height: 2vh;
-}
-
-.text-container {
-    margin: 0 auto 0 auto;
-    text-align: left;
-    font-size: 1em;
-    line-height: 1.8em;
-    color: base.$primary-text;
-    padding-bottom: 2vh;
-    max-width: 800px;
-    width: 100%;
-}
-
-footer {
-    font-size: 0.9em;
-    line-height: 2em;
-    height: auto;
-    background-color: base.$light-green;
-    margin-top: 4vh;
-    position: relative;
-    padding-right: 10vw;
-    padding-left: 10vw;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    width: 100%;
-    text-align: center;
-    font-weight: 400;
-    max-width: 1512px;
-}
-
-footer p {
-    color: base.$primary-text;
-    text-align: center;
-}
-*/
-
-.image-container {
-    display: block;
-    justify-content: center;
-    margin: 0 auto 0 auto;
-    text-align: center;
-    padding-bottom: 2vh;
-    padding-top: 2vh;
-    max-width: 900px;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-/*
-.text {
-    color: base.$primary-text;
-}
-*/
 // Mixins
 .onedot {
     margin: 0 auto;
@@ -153,31 +50,6 @@ img {
     display: inline-block;
 }
 
-// Nästlad lista
-div {
-
-    margin: 0 auto;
-
-    ul {
-        padding: 0;
-        color: aqua;
-        padding-left: 4vw;
-        padding-top: 2vh;
-        padding-bottom: 2vh;
-    }
-
-    li {
-        color: base.$primary-green;
-        padding-left: 6px;
-    }
-
-    a {
-        color: base.$black;
-        padding-left: 6px;
-        padding-top: 6px;
-        text-decoration: none;
-    }
-}
 
 // Animering - element som ändrar färg
 .backgroundTransition {
@@ -288,6 +160,7 @@ h2 {
 
 
 header {
+  height: 5vh;
   max-width: 1620px;
   margin: 0 auto 0 auto;
 }
@@ -387,6 +260,7 @@ margin: 0 auto 0 auto;
 .space2 {
   height: 1vh;
 }
+
 
 /* Media querys */
 
