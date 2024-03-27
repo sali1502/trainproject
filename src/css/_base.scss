@@ -4,9 +4,9 @@
 $font-stack: 'Roboto', sans-serif;
 
 // Variabler "color functions"
-$primary-green: #5F8575;
-$dark-green: darken($primary-green, 20%);
+$primary-green: rgb(146, 211, 167);
 $light-green: lighten($primary-green, 20%);
+$dark-green: darken($primary-green, 20%);
 
 // Variabler färger
 $black: #000;
@@ -14,18 +14,16 @@ $white: #fff;
 $grey: #1a1a1a;
 
 // Variabler ljust tema
+$primary-bg: $primary-green;
+$primary-heading: $black;
 $primary-text: $black;
-$primary-bg: $white;
-$primary-heading: $dark-green;
-$primary-header-footer: $light-green;
 
 // Variabler mörkt tema
-$primary-text-darkm: $white;
 $primary-bg-darkm: $grey;
 $primary-heading-darkm: $white;
-$primary-header-footer-darkm: $light-green;
+$primary-text-darkm: $white;
 
-// Mixin
+/* // Mixin
 @mixin circle ($width, $height, $color) {
     width: $width;
     height: $height;
@@ -51,3 +49,4 @@ $primary-header-footer-darkm: $light-green;
         border-top-color: $color;
     }
 }
+*/
