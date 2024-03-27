@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     marker = L.marker(coordinates).addTo(map);
                 }
 
-                // Kalla på funktionen skriv ut väderprognos
                 writeForecast(lat, lon);
 
             } else {

@@ -15,7 +15,6 @@
   grid-template-columns: 2fr;
   grid-gap: 0px;
   padding: 0px;
-  background-color: base.$primary-green;
   padding: 0px;
   width: 100%;
   max-width: 1512px;
@@ -25,6 +24,7 @@
 body {
   background-color: base.$primary-green;
   font: 100% base.$font-stack;
+  font-style: normal;
   text-align: center;
   font-weight: 400;
   max-width: 1512px;
@@ -32,10 +32,8 @@ body {
 }
 
 header {
+  @extend body;
   height: 5vh;
-  background-color: base.$primary-green;
-  max-width: 1512x;
-  margin: 0 auto 0 auto;
 }
 
 h1 {
@@ -50,13 +48,12 @@ h1 {
 }
 
 h2 {
-  font: 100% base.$font-stack;
+  @extend h1;
   font-weight: 700;
   font-size: 1em;
-  font-style: normal;
   line-height: 2em;
+  padding-bottom: 0vh;
   padding-top: 1vh;
-  margin: 0 auto 0 auto;
 }
 
 p {
@@ -68,33 +65,23 @@ p {
 }
 
 article p {
+  @extend p;
   padding-bottom: 2vh;
-  margin: 0 auto 0 auto;
-
 }
 
 footer {
-  font: 100% base.$font-stack;
-  font-weight: 400;
-  font-style: normal;
+  @extend body;
   line-height: 1.6em;
   height: 5vh;
-  background-color: rgb(146, 211, 167);
-  text-align: center;
   padding-top: 4vh;
   max-width: 1512px;
-  margin: 0 auto 0 auto;
 }
 
 footer p {
-  font: 100% base.$font-stack;
-  font-weight: 400;
-  font-style: normal;
+  @extend body;
   font-size: 0.9em;
   line-height: 1.6em;
-  text-align: center;
   padding-bottom: 2vh;
-  margin: 0 auto 0 auto;
 }
 
 #searchInput {
@@ -102,7 +89,7 @@ margin: 0 auto 0 auto;
 }
 
 #searchBtn {
-margin: 0 auto 0 auto;
+@extend #searchInput;
 }
 
 #weather {
@@ -132,6 +119,20 @@ img {
   padding-bottom: 2vh;
   border-radius: 10%;
   max-width: 200px;
+}
+
+// Animering - flygplansikon som rör sig vid hoover
+#plane {
+  width: 50px;
+  height: 50px;
+  background-color: base.$primary-green;
+  text-align: center;
+  padding-top: 2vh;
+  margin: 0 auto 0 auto;
+}
+
+#plane:hover {
+  animation: movePlaneHover 3s 0s;
 }
 
 /*
@@ -182,7 +183,6 @@ img {
 .dot-header {
     display: inline-block;
 }
-
 
 // Animering - element som ändrar färg
 .backgroundTransition {
@@ -290,6 +290,7 @@ img {
     width: 100%;
   }
 
+
   /* #jumpingDot {
       margin-top: 40vh;
       @extend .threedot;
@@ -304,8 +305,8 @@ img {
   #weather {
     display: block;
     text-align: center;
-    padding-right: 2vw;
-    padding-left: 2vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
     margin: 0 auto 0 auto;
   }
 

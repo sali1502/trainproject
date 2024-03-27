@@ -1,9 +1,9 @@
 @use 'base';
 
-/* @keyframes colorChangeHover {
+@keyframes movePlaneHover {
 
     0% {
-        background-color: base.$light-green;
+        transform: rotate(0deg);
     }
 
     5% {
@@ -23,14 +23,16 @@
     }
 
     50% {
-        background-color: base.$primary-green;
+        transform: translate(100px, -100px);
     }
 
     100% {
-        background-color: base.$dark-green;
+        transform: translate(100px, -100px);
     }
 }
 
+
+/*
 @keyframes colorChangeStill {
 
     0% {
