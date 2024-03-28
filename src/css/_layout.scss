@@ -1,7 +1,6 @@
 @use 'base';
 @use 'keyframes';
 
-
 * {
   margin: 0;
 }
@@ -22,7 +21,7 @@
 }
 
 body {
-  background-color: base.$primary-green;
+  background-color: base.$primary-bg;
   font: 100% base.$font-stack;
   font-style: normal;
   text-align: center;
@@ -38,7 +37,7 @@ header {
 
 h1 {
   font: 100% base.$font-stack;
-  color: "base.$primary-heading";
+  color: base.$primary-heading;
   font-weight: 500;
   font-size: 2.4em;
   font-style: normal;
@@ -49,6 +48,7 @@ h1 {
 
 h2 {
   @extend h1;
+  color: base.$primary-text;
   font-weight: 700;
   font-size: 1em;
   line-height: 2em;
@@ -58,6 +58,7 @@ h2 {
 
 p {
   font: 100% base.$font-stack;
+  color: base.$primary-text;
   font-weight: 400;
   font-style: normal;
   line-height: 1.4em;
@@ -125,103 +126,30 @@ img {
 #plane {
   width: 50px;
   height: 50px;
-  background-color: base.$primary-green;
+  background-color: base.$primary-bg;
   text-align: center;
   padding-top: 2vh;
   margin: 0 auto 0 auto;
+  animation: movePlaneHover 2s 0s;
+  animation-play-state: paused;
 }
 
 #plane:hover {
-  animation: movePlaneHover 3s 0s;
+  animation: movePlaneHover 2s 0s;
+  animation-play-state: running;
 }
 
-/*
-// Mixins
-.onedot {
-    margin: 0 auto;
-    margin-bottom: 2vh;
-    @include base.circle (10px, 10px, base.$light-green);
-}
-
-.twodot {
-    margin: 0 auto;
-    margin-bottom: 2vh;
-    @include base.circle (10px, 10px, base.$primary-green);
-}
-
-.threedot {
-    margin: 0 auto;
-    margin-bottom: 2vh;
-    @include base.circle (10px, 10px, base.$dark-green);
-}
-
+//Mixin 
 .arrow {
     margin: 0 auto;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
     @include base.triangle (16px, base.$dark-green, down);
+    animation: moveArrow 1s 2s 10 alternate both linear;
 }
-
-// Selector inheritance
-.dotone {
-    @extend .onedot;
-}
-
-.dottwo {
-    @extend .twodot;
-}
-
-.container-dot-header {
-    margin: 0 auto 0 auto;
-    text-align: center;
-    padding-top: 4vh;
-    padding-bottom: 2vh;
-    max-width: 550px;
-    width: 100%;
-}
-
-.dot-header {
-    display: inline-block;
-}
-
-// Animering - element som ändrar färg
-.backgroundTransition {
-    width: 150px;
-    height: 50px;
-    background-color: base.$light-green;
-    border-radius: 50;
-    margin: 0 auto 0 auto;
-    text-align: center;
-    padding-top: 2vh;
-    animation: colorChangeStill 6s 2s infinite alternate both ease-out;
-}
-
-// Animering - element som ändrar färg och rör sig vid hoover
-.backgroundTransitionHover {
-    width: 150px;
-    height: 50px;
-    background-color: base.$light-green;
-    border-radius: 50;
-    margin: 0 auto 0 auto;
-    text-align: center;
-    padding-top: 2vh;
-}
-
-.backgroundTransitionHover:hover {
-    animation: colorChangeHover 2s 0s infinite both ease-out;
-}
-
-// Animering - studsande prick
-#jumpingDot {
-    margin-top: 25vh;
-    @extend .threedot;
-    animation: jumpingDot 6s 2s infinite alternate both linear;
-}
-*/
 
 /* Media querys */
 
-/* dark mode */
+// dark mode
 @media (prefers-color-scheme: dark) {
 
   body {
@@ -237,7 +165,7 @@ img {
   }
 }
 
-/* Visar en kolumn för litet läge, mobiltelefon */
+// Visar en kolumn för litet läge, mobiltelefon
 @media only screen and (max-width: 800px) {
 
   h1 {
@@ -289,17 +217,9 @@ img {
     height: 50vh;
     width: 100%;
   }
-
-
-  /* #jumpingDot {
-      margin-top: 40vh;
-      @extend .threedot;
-      animation: jumpingDot_mobile 6s 2s infinite alternate both linear;
-  } */
-
 }
 
-/* Visar en kolumn för mycket litet läge, mobiltelefon */
+// Visar en kolumn för mycket litet läge, mobiltelefon
 @media only screen and (max-width: 300px) {
 
   #weather {
@@ -309,5 +229,4 @@ img {
     padding-left: 5vw;
     margin: 0 auto 0 auto;
   }
-
 }
