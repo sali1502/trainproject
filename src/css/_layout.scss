@@ -144,7 +144,7 @@ img {
     margin: 0 auto;
     margin-bottom: 1vh;
     @include base.triangle (16px, base.$dark-green, down);
-    animation: moveArrow 1s 2s 10 alternate both linear;
+    animation: moveArrow 1s 6s 12 alternate both linear;
 }
 
 /* Media querys */

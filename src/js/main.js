@@ -12,7 +12,7 @@ async function getForecast(lat, long) {
     }
 }
 
-// Skriv ut väderprognos med koordinater från sök
+// Skriv ut väderprognos från koordinater
 async function writeForecast(lat, long) {
     try {
         let data = await getForecast(lat, long);
