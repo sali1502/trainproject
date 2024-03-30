@@ -1,7 +1,7 @@
 {
   "name": "trainproject",
   "version": "1.0.0",
-  "description": "",
+  "description": "**Projektuppgift DT211G**<br>\r ***I projektuppgiften för kursen Frontend-baserad webbutveckling<br>\r har en sökbar karta med hjälp av Leaflet och Nominatim skapats.<br>\r Utöver detta har väderdata från tomorrow.io lästs in.<br>\r Detta har skapat en mashup där två api:er kommmunicerar med varandra.<br>\r Vid sök av destination markeras destinationen på kartan samtidigt som<br>\r den högsta och lägsta temperaturen för destinationen läses ut för de kommande sex dagarna.<br>\r Vidare har en animering där ett flygplan lyfter och lämnar webbläsarfönstet skapats.<br>\r Detta sker vid hover över flygplansikonen i huvudrubriken.<br>\r En animerad pil har även skapats för att påminnna användaren om att skriva in en destination i sökrutan.***",
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
