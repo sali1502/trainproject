@@ -86,11 +86,11 @@ footer p {
 }
 
 #searchInput {
-margin: 0 auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 #searchBtn {
-@extend #searchInput;
+  @extend #searchInput;
 }
 
 #weather {
@@ -101,7 +101,7 @@ margin: 0 auto 0 auto;
 }
 
 #map {
-  height: 50vh;
+  height: 450px;
   width: 100%;
 }
 
@@ -122,7 +122,7 @@ img {
   max-width: 200px;
 }
 
-// Animering - flygplansikon som rör sig vid hoover
+// Animering - flygplansikon som rör sig vid hoover, försvinner ur webbläsarfönstret och stannar där
 #plane {
   width: 50px;
   height: 50px;
@@ -139,12 +139,12 @@ img {
   animation-play-state: running;
 }
 
-//Mixin 
+//Mixin och animation  - grön pil som rör sig vertikalt
 .arrow {
-    margin: 0 auto;
-    margin-bottom: 1vh;
-    @include base.triangle (16px, base.$dark-green, down);
-    animation: moveArrow 1s 6s 12 alternate both linear;
+  margin: 0 auto;
+  margin-bottom: 1vh;
+  @include base.triangle (16px, base.$dark-green, down);
+  animation: moveArrow 1s 2s 25 alternate both linear;
 }
 
 /* Media querys */
@@ -153,15 +153,15 @@ img {
 @media (prefers-color-scheme: dark) {
 
   body {
-      background-color: base.$primary-bg-darkm !important;
+    background-color: base.$primary-bg-darkm !important;
   }
 
   h1 {
-      color: base.$primary-heading-darkm !important;
+    color: base.$primary-heading-darkm !important;
   }
 
   p {
-      color: base.$primary-text-darkm !important;
+    color: base.$primary-text-darkm !important;
   }
 }
 
@@ -191,12 +191,12 @@ img {
   }
 
   #searchInput {
-  margin: 0 auto o auto; 
-}
+    margin: 0 auto o auto;
+  }
 
-  #searchBtn {  
+  #searchBtn {
     margin: 0 auto 0 auto;
-    }
+  }
 
   #weather {
     display: flex;
@@ -214,7 +214,7 @@ img {
   }
 
   #map {
-    height: 50vh;
+    height: 450px;
     width: 100%;
   }
 }
