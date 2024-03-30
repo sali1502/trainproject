@@ -163,6 +163,36 @@ img {
   p {
     color: base.$primary-text-darkm !important;
   }
+
+  #plane {
+    width: 50px;
+    height: 50px;
+    background-color: base.$primary-bg-darkm;
+    text-align: center;
+    padding-top: 2vh;
+    margin: 0 auto 0 auto;
+    animation: movePlaneHover 2s 0s;
+    animation-play-state: paused;
+  }
+  
+  #plane:hover {
+    animation: movePlaneHover 2s 0s;
+    animation-play-state: running;
+  }
+  
+  //Mixin och animation  - grön pil som rör sig vertikalt
+  .arrow {
+    margin: 0 auto;
+    margin-bottom: 1vh;
+    @include base.triangle (16px, base.$primary-text-darkm, down);
+    animation: moveArrow 1s 2s 25 alternate both linear;
+  }
+
+
+
+
+
+
 }
 
 // Visar en kolumn för litet läge, mobiltelefon
