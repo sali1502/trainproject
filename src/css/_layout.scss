@@ -174,12 +174,12 @@ img {
     animation: movePlaneHover 2s 0s;
     animation-play-state: paused;
   }
-  
+
   #plane:hover {
     animation: movePlaneHover 2s 0s;
     animation-play-state: running;
   }
-  
+
   //Mixin och animation  - grön pil som rör sig vertikalt
   .arrow {
     margin: 0 auto;
@@ -187,12 +187,6 @@ img {
     @include base.triangle (16px, base.$primary-text-darkm, down);
     animation: moveArrow 1s 2s 25 alternate both linear;
   }
-
-
-
-
-
-
 }
 
 // Visar en kolumn för litet läge, mobiltelefon
