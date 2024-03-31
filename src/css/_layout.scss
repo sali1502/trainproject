@@ -46,13 +46,13 @@ h1 {
   margin: 0 auto 0 auto;
 }
 
-h2 {
+article h2 {
   @extend h1;
   color: base.$primary-text;
   font-weight: 700;
   font-size: 1em;
   line-height: 1em;
-  padding-bottom: 0vh;
+  padding-bottom: 2vh;
   padding-top: 1vh;
 }
 
@@ -160,7 +160,7 @@ img {
     color: base.$primary-heading-darkm !important;
   }
 
-  h2 {
+  article h2 {
     color: base.$primary-heading-darkm !important;
   }
 
@@ -192,7 +192,7 @@ img {
   .arrow {
     margin: 0 auto;
     margin-bottom: 1vh;
-    @include base.triangle (16px, base.$primary-text-darkm, down);
+    @include base.triangle (16px, base.$primary-text-article-darkm, down);
     animation: moveArrow 1s 2s 25 alternate both linear;
   }
 }
@@ -209,10 +209,10 @@ img {
     margin: 0 auto 0 auto;
   }
 
-  h2 {
+ article h2 {
     padding-right: 5vw;
     padding-left: 5vw;
-    padding-top: 1vh;
+    padding-top: 2vh;
     margin: 0 auto 0 auto;
   }
 
@@ -243,11 +243,6 @@ img {
   article p {
     padding-bottom: 2vh;
     margin: 0 auto 0 auto;
-  }
-
-  #map {
-    height: 450px;
-    width: 100%;
   }
 }
 
