@@ -11,6 +11,7 @@ $dark-green: darken($primary-green, 50%);
 // Variabler färger
 $black: #000;
 $grey: #1a1a1a;
+$white: #ffffff;
 
 // Variabler ljust tema
 $primary-bg: $primary-green;
@@ -19,7 +20,7 @@ $primary-text: $black;
 
 // Variabler mörkt tema
 $primary-bg-darkm: $grey;
-$primary-heading-darkm: $light-green;
+$primary-heading-darkm: $white;
 $primary-text-darkm: $light-green;
 
 // Mixin
