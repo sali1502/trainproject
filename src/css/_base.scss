@@ -21,7 +21,8 @@ $primary-text: $black;
 // Variabler mörkt tema
 $primary-bg-darkm: $grey;
 $primary-heading-darkm: $white;
-$primary-text-darkm: $light-green;
+$primary-text-darkm: $white;
+$primary-text-article-darkm: $light-green;
 
 // Mixin
 @mixin circle ($width, $height, $color) {
